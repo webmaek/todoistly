@@ -1,4 +1,13 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
+
+const fonts = {
+  body: `'Poppins', ${baseTheme.fonts.body}`,
+  heading: `'Poppins', ${baseTheme.fonts.heading}`,
+};
+
+const shadows = {
+  outline: "0 0 0 3px rgba(129, 140, 248, 1)",
+};
 
 const colors = {
   slate: {
@@ -245,6 +254,6 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({ fonts, colors, shadows });
 
 export default theme;
