@@ -5,10 +5,14 @@ import "../styles/globals.css";
 
 import theme from "../theme";
 
+import Layout from "@/components/Layout";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ChakraProvider>
   );
 }
